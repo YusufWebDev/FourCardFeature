@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+	/* fonts */
+	--ff-poppins: "Poppins", sans-serif;
+	/* primary colors */
+	--clr-prim-Red: hsl(0, 78%, 62%);
+	--clr-prim-Cyan: hsl(180, 62%, 55%);
+	--clr-prim-Orange: hsl(34, 97%, 64%);
+	--clr-prim-Blue: rgb(84, 158, 242);
+	/* neutral colors */
+	--clr-Neut-VeryDarkBlue: hsl(234, 12%, 34%);
+	--clr-Neut-GrayishBlue: rgb(163, 165, 174);
+	--clr-Neut-VeryLightGray: hsl(0, 0%, 98%);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+	margin: 0 auto;
+	line-height: 1.5;
+	background-color: var(--clr-Neut-VeryLightGray);
+	font-size: 0.935rem;
+	font-family: var(--ff-poppins);
+}
+.h1,
+h2,
+h3,
+h4,
+p {
+	max-width: 60ch;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+/***********START MEDIA QUERIES *************/
+@media screen and (min-width: 800px) {
+	.title-1 {
+		font-weight: 200;
+		font-size: 2rem !important;
+		color: var(--clr-Neut-VeryDarkBlue);
+	}
+	.title-2 {
+		font-weight: 600;
+		margin: 0.3rem auto;
+		font-size: 2rem !important;
+		color: var(--clr-Neut-VeryDarkBlue);
+	}
+	.card-section {
+		max-width: 70%;
+		margin: auto;
+		display: grid !important;
+		column-gap: 2.5rem;
+		grid-template-columns: 1fr 1fr !important;
+		grid-template-rows: auto !important;
+		grid-template-areas:
+			"s b"
+			"k c";
+	}
+	.card-supervisor {
+		grid-area: s;
+	}
+	.card-teamBuilder {
+		grid-area: b;
+	}
+
+	.card-karma {
+		grid-area: k;
+	}
+
+	.card-calculator {
+		grid-area: c;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.title-1 {
+		font-weight: 200;
+		font-size: 2.5rem !important;
+		color: var(--clr-Neut-VeryDarkBlue);
+	}
+	.title-2 {
+		font-weight: 600;
+		margin: 0.3rem auto;
+		font-size: 2.5rem !important;
+		color: var(--clr-Neut-VeryDarkBlue);
+	}
+	.sub-title {
+		font-size: 1rem !important;
+		font-weight: 200;
+		margin-top: 1rem;
+		color: var(--clr-Neut-GrayishBlue);
+	}
+	.card-section {
+		width: 70%;
+		margin: auto;
+		display: grid !important;
+		column-gap: 2.5rem;
+		grid-template-columns: 1fr 1fr 1fr !important;
+		grid-template-rows: auto !important;
+		grid-template-areas:
+			". b ."
+			"s b c"
+			"s . c"
+			"s k c"
+			". k .";
+	}
+	.card-supervisor {
+		grid-area: s;
+	}
+	.card-teamBuilder {
+		grid-area: b;
+	}
+
+	.card-karma {
+		grid-area: k;
+	}
+
+	.card-calculator {
+		grid-area: c;
+	}
+}
+
+/***********END MEDIA QUERIES *************/
+
+/* content wrapper section */
+.wrapper {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	padding: 1.5rem 1.5rem;
+	max-width: 1440px;
+	min-width: 375px;
+	overflow: auto;
+	background-color: var(--clr-Neut-VeryLightGray);
+	/* background-color: rgb(30, 255, 0); */
+}
+
+/* header section */
+.header-section {
+	/* background-color: royalblue; */
+	padding: 1rem;
+	margin: 2rem auto;
+}
+
+.title-1 {
+	font-weight: 200;
+	font-size: 1.5rem;
+	color: var(--clr-Neut-VeryDarkBlue);
+}
+.title-2 {
+	font-weight: 600;
+	margin: 0.3rem auto;
+	font-size: 1.5rem;
+	color: var(--clr-Neut-VeryDarkBlue);
+}
+.sub-title {
+	font-size: 0.9rem;
+	font-weight: 200;
+	margin-top: 1rem;
+	color: var(--clr-Neut-GrayishBlue);
+}
+
+/* card section */
+
+.card-supervisor {
+	border-top: 3px solid var(--clr-prim-Cyan);
+}
+.card-teamBuilder {
+	border-top: 3px solid var(--clr-prim-Red);
+}
+
+.card-karma {
+	border-top: 3px solid var(--clr-prim-Orange);
+}
+
+.card-calculator {
+	border-top: 3px solid var(--clr-prim-Blue);
+}
+.card-supervisor,
+.card-teamBuilder,
+.card-karma,
+.card-calculator {
+	background-color: #fff;
+	height: 220px;
+	width: 310px;
+	margin: 2rem auto;
+	border-radius: 0.3rem;
+	padding: 1.5rem 2rem !important;
+	box-shadow: 0px 14px 15px -3px rgba(84, 158, 242, 0.2);
+	position: relative;
+}
+.card-title {
+	text-align: left;
+}
+.card-description {
+	text-align: left;
+	font-size: 0.8rem;
+	font-weight: 400;
+	margin-top: 0.5rem;
+	color: var(--clr-Neut-GrayishBlue);
+}
+.card-section img {
+	height: 3.5rem;
+	position: absolute;
+	bottom: 1.5rem;
+	right: 1.5rem;
+}
+/* footer section */
+
+footer {
+	margin: auto;
+	margin: 1.5rem auto;
+	align-self: center;
+	/* background-color: rgb(212, 199, 199); */
+}
+.attribution {
+	font-size: 11px;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
